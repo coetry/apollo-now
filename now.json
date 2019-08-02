@@ -4,10 +4,10 @@
     {
       "src": "index.js",
       "use": "@now/node",
-      "methods": ["GET", "POST"],
       "config": {
         "awsLambdaHandler": "index.handler"
       }
     }
-  ]
+  ],
+  "routes": [{ "src": "/(.*)", "methods": ["GET", "POST"] }]
 }
