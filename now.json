@@ -2,13 +2,9 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/**/*.js",
-      "use": "@now/node"
-    },
-    {
-      "src": "api/index.js",
+      "src": "index.js",
       "use": "@now/node",
-      "config": { "awsLambdaHandler": "api/index.handler" }
+      "config": { "awsLambdaHandler": "index.handler" }
     }
   ]
 }
