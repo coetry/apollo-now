@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@now/node",
+      "config": { "awsLambdaHandler": "index.handler" }
+    }
+  ]
+}
