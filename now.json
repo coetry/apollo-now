@@ -4,7 +4,10 @@
     {
       "src": "index.js",
       "use": "@now/node",
-      "config": { "awsLambdaHandler": "index.handler" }
+      "methods": ["GET", "POST"],
+      "config": {
+        "awsLambdaHandler": "index.handler"
+      }
     }
   ]
 }
