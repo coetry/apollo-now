@@ -1,4 +1,6 @@
-const { ApolloServer, gql } = require("apollo-server-lambda");
+const cors = require("micro-cors")();
+const micro = require("micro");
+const { ApolloServer, gql } = require("apollo-server-micro");
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
@@ -16,9 +18,4 @@ const resolvers = {
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
-exports.handler = server.createHandler({
-  cors: {
-    origin: "*",
-    credentials: true
-  }
-});
+module.exports = micro(cors(server.createHandler()));

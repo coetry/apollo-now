@@ -3,11 +3,11 @@
   "builds": [
     {
       "src": "index.js",
-      "use": "@now/node",
-      "config": {
-        "awsLambdaHandler": "index.handler"
-      }
+      "use": "@now/node"
     }
   ],
-  "routes": [{ "src": "/(.*)", "methods": ["GET", "POST"] }]
+  "routes": [
+    { "src": "/", "methods": ["GET", "POST"], "dest": "index.js" },
+    { "handle": "filesystem" }
+  ]
 }
