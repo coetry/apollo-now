@@ -3,7 +3,6 @@ const { ApolloServer, gql } = require("apollo-server-micro");
 const typeDefs = gql`
   type Query {
     hello: String
-    bye: String
   }
 `;
 
@@ -11,9 +10,6 @@ const resolvers = {
   Query: {
     hello: (root, args, context) => {
       return "Hello world!";
-    },
-    bye: (root, args, context) => {
-      return "Bye world!";
     }
   }
 };
