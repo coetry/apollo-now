@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "apollo-server": "^2.8.1",
-    "apollo-server-lambda": "^2.8.1",
+    "apollo-server-lambda": "^2.14.2",
     "apollo-server-micro": "^2.8.1",
     "graphql": "^14.4.2",
     "micro": "^9.3.4",
